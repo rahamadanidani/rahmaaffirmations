@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp">
+
+    <!-- 1.linear layout adalah kelompok tampilan yang menyejajarkan semua turunan dalam satu arah,
+           dimana pada pada aturan dibawah ini yaitu secara vertikal
+         2.Turunan tersebut terdiri dari width(lebarnya) hanya memiliki satu turunan perbaris serta
+           linear layout juga mematuhi margin antara bagian bawah dan atasnya serta sejajar antara
+           kanan,tengah maupun kiri dalam turunan pada tampilan di emulator nantinya pada saat project
+           dijalankan-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+<!-- 1. Komponen untuk menampilkan gambar dimana lebar dan tingginya sesuai dengan gambar yang sudah di
+     2.  inputkan di drawlable,sehingga tampilannya pada saat aolikasi dijalankan sesuai dengan yang
+         telah diinputkan dimana untuk kepentingan aksesibilitasnya itu dibuat (tidak) serta gambar akan
+         berada ditengah-tengah.-->
+        <ImageView
+            android:id="@+id/item_image"
+            android:layout_width="match_parent"
+            android:layout_height="194dp"
+            android:importantForAccessibility="no"
+            android:scaleType="centerCrop" />
+
+<!--komponen yang berguna untuk menampilkan teks ke layar dimana untuk ukuran teksnya dibatasi menjadi
+    16dp dan untuk fontnya yaitu menggunakan type attr/textAppearanceHeadline6 -->
+        <TextView
+            android:id="@+id/item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:textAppearance="?attr/textAppearanceHeadline6" />
+
+</LinearLayout>
+</com.google.android.material.card.MaterialCardView>

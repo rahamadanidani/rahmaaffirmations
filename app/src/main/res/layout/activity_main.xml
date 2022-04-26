@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+<!--1. menentukan nama class aktivitas menggunakan prefiks titik yang
+       sama seperti dalam file manifes (dengan mengecualikan nama paket lengkap) seperti dibawah ini
+       yang dikecualikan yaitu MainActivity
+    2. Pada atribut xml dalam sebuah namespace tools dimana berfungsi untuk mengaktifkan fitur waktu
+       melakukan desain seperti tata letak yang harus ditampilkan dalam fragmen atau perilaku waktu
+       kompilasi seperti mode penyingkatan yang harus digunakan pada resource XML-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scrollbars="vertical"
+        app:layoutManager="LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <!-- 1. memudahkan untuk menampilkan kumpulan data dalam jumlah besar secara efisien
+         2.Dimana pada layout manager berfungsi untuk mengelola tata letak image yang sudah kita
+            inputkan sebelumnya.
+         3.serta pada liner layout sendiri berfungsi untuk menyusun item/image dalam satu baris
+           atau mensejajarkan tampilan image pada saat project dijalankan agar image yang sudah di
+           inputkan dapat ditampilkan dengan rapi dan teratur dimana constraint layout juga sangat
+           memiliki peran sebagai mengatur tata letak yang kompleks dan besar dengan tampilan yang datar.-->
+</androidx.constraintlayout.widget.ConstraintLayout>
